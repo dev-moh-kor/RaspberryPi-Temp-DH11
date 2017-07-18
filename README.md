@@ -1,14 +1,26 @@
 # RaspberryPi-Temp-DH11
-Install the ADAFRUIT library from Github:
+Install the ADAFRUIT DHT library from Github:
+Python GPIO library:
 
-    apt-get update
-    sudo apt-get install build-essential python-dev
+    sudo apt-get install build-essential python-dev python-pip
+    sudo pip install RPi.GPIO
+Python Imaging library:
+
+    sudo apt-get install python-imaging python-smbus
+Adafruit SSD1306 Python library:
+
+    sudo apt-get install git
+    git clone https://github.com/adafruit/Adafruit_Python_SSD1306.git
+
+    cd Adafruit_Python_SSD1306; sudo python setup.py install
+
+Detect Oled connection 
     
-    cd /usr/src/
-    sudo git clone https://github.com/adafruit/Adafruit_Python_DHT.git
-    
-    cd Adafruit_Python_DHT
-    sudo python setup.py install
+    sudo apt-get install i2c-tools
+
+Check connection:
+
+    sudo i2cdetect -y 1
 
 Create the python script ex: dht.py
 
